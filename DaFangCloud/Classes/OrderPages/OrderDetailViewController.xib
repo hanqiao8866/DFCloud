@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailViewController">
+            <connections>
+                <outlet property="listTableView" destination="B61-Lh-Csu" id="hA9-el-N3w"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B61-Lh-Csu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="616"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YZz-Dv-Wgb"/>
+                        <outlet property="delegate" destination="-1" id="jhN-8k-QHO"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-k1-Mz1">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.40320855379104614" blue="0.74793052673339844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="A60-JR-U3u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="添加节点" image="add_node_icon"/>
+                    <connections>
+                        <action selector="addNodeClick:" destination="-1" eventType="touchUpInside" id="MEj-9X-PAK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B61-Lh-Csu" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1gm-tX-pS6"/>
+                <constraint firstItem="mwZ-k1-Mz1" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="PcL-yo-hCz"/>
+                <constraint firstItem="B61-Lh-Csu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TN3-o9-Xfa"/>
+                <constraint firstItem="mwZ-k1-Mz1" firstAttribute="top" secondItem="B61-Lh-Csu" secondAttribute="bottom" constant="1" id="Uex-N4-0mZ"/>
+                <constraint firstItem="mwZ-k1-Mz1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="UfG-Tu-5PF"/>
+                <constraint firstItem="mwZ-k1-Mz1" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="bYM-cx-X3S"/>
+                <constraint firstItem="B61-Lh-Csu" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="xU0-WY-cOS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_node_icon" width="20" height="20"/>
+    </resources>
+</document>
